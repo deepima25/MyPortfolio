@@ -1,0 +1,415 @@
+/* ---------- GENERAL ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #0f0f0f;
+    color: white;
+    line-height: 1.6;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* ---------- FIX STICKY NAVBAR OVERLAP ---------- */
+html {
+    scroll-padding-top: 120px;
+}
+
+section {
+   
+    padding-top: 100px; /* slightly more than navbar height */
+    margin-top: 0;
+}
+
+
+#navbar {
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+}
+section {
+    padding-top: 80px; /* spacing under navbar */
+}
+
+/* ---------- NAVBAR ---------- */
+#navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+}
+
+
+    /* ---------- LOGO ---------- */
+#navbar .logo img {
+    width: 50px;      /* adjust width as needed */
+    height: auto;     /* keeps aspect ratio */
+    display: block;
+}
+
+#navbar .logo span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #00eaff;
+}
+
+
+#navbar ul {
+    display: flex;
+    gap: 30px;
+}
+
+#navbar a {
+    color: #ccc;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#navbar a:hover,
+#navbar .active {
+    color: #00eaff;
+}
+
+/* Sticky Navbar effect */
+.sticky {
+    background: black;
+    padding: 15px 60px;
+    transition: 0.3s;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+    margin-top: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+    gap: 40px;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* space between heading, paragraph, and button */
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+}
+
+.hero-text .highlight {
+    color: #00eaff;
+}
+
+.hero-text .btn {
+    width: fit-content;
+    padding: 12px 25px;
+    font-size: 1rem;
+}
+
+/* Hero image */
+.hero-img img {
+    width: 350px;
+    border-radius: 10px;
+}
+
+/* ---------- ABOUT ---------- */
+.about-section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 60px 20px;
+    text-align: left;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-content {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.about-img img {
+    width: 300px;
+    border-radius: 15px;
+    object-fit: cover;
+    
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.about-text ul {
+    margin: 10px 0 15px 20px;
+    list-style-type: disc;
+}
+
+.about-text ul li {
+    margin-bottom: 8px;
+}
+
+.about-text a {
+    color: #00eaff;
+    text-decoration: underline;
+    transition: 0.3s;
+}
+
+.about-text a:hover {
+    color: #ff4d6d;
+}
+.about-img img:hover {
+    transform: scale(1.05) rotate(-1deg);
+    transition: transform 0.4s;
+}
+
+/* ---------- SKILLS ---------- */
+.skills {
+    padding: 80px 60px;
+}
+
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.skill-card {
+    padding: 25px;
+    text-align: center;
+    background: #1a1a1a;
+    border-radius: 10px;
+}
+
+.skill-card img {
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+/* ---------- PROJECTS ---------- */
+.projects-section {
+    padding: 80px 60px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.project-card {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* spacing between image, title, description, and button */
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.project-card .btn {
+    width: fit-content;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+}
+
+/* ---------- CONTACT ---------- */
+.contact {
+    padding: 80px 60px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+    margin: auto;
+}
+
+.contact input,
+.contact textarea {
+    padding: 15px;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    color: white;
+    border-radius: 5px;
+}
+
+.contact button {
+    width: fit-content;
+    padding: 12px 25px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+/* ---------- BUTTON STYLING ---------- */
+.btn {
+    display: inline-block;  /* ensures proper sizing for links and buttons */
+    background-color: #00eaff;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Hover effect */
+.btn:hover {
+    background-color: #00c1cc;
+    color: white;
+}
+/* ---------- LOGO + PORTFOLIO ---------- */
+#navbar .logo {
+    display: flex;
+    align-items: center; /* vertical center */
+    gap: 15px;           /* space between logo image and text */
+}
+
+#navbar .logo img {
+    width: 60px;         /* slightly bigger logo */
+    height: auto;
+}
+
+#navbar .logo span {
+    font-size: 2rem;     /* bigger site name */
+    font-weight: bold;
+    color: #00eaff;
+}
+/* Fix content being hidden under sticky navbar */
+html {
+    scroll-padding-top: 120px; /* height of navbar */
+}
+
+section {
+    padding-top: 120px; /* spacing below navbar */
+}
+/* ---------- FIX FOR STICKY NAVBAR OVERLAP ---------- */
+section::before {
+    content: "";
+    display: block;
+    height: 120px; /* height of navbar */
+    margin-top: -120px; /* negates extra space */
+    visibility: hidden; /* invisible spacer */
+}
+/* Move About Me heading below navbar */
+#about h2 {
+    margin-top: 140px; /* moves heading down */
+}
+.skill-card img {
+    width: 80px;       /* make image bigger */
+    height: auto;      /* maintain aspect ratio */
+    margin-bottom: 10px;
+    transition: transform 0.3s; /* optional hover effect */
+}
+
+/* Optional: hover effect to enlarge slightly */
+.skill-card img:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+/* ---------- PROJECTS GRID ---------- */
+.project-grid {
+    display: flex;
+    justify-content: center;  /* centers the cards */
+    gap: 40px;                /* space between project cards */
+    flex-wrap: wrap;          /* wrap on smaller screens */
+}
+
+/* Project card styling */
+.project-card {
+    width: 300px;             /* set fixed width for all project cards */
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, 
+}
+
+/* Image styling */
+.project-card img {
+    width: 100%;              /* ensures image fits the card */
+    height: 200px;            /* fixed height for uniformity */
+    object-fit: cover;        /* crops images to fit nicely */
+    border-bottom: 2px solid #00eaff; /* optional border accent */
+    transition: transform 0.3s;
+}
+
+/* Hover effect for cards */
+.project-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    
+}
+
+.project-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Project title & description */
+.project-card h3 {
+    margin: 10px 0 5px;
+    font-size: 1.2rem;
+    color: #00eaff;
+}
+
+.project-card p {
+    font-size: 0.95rem;
+    color: #ccc;
+}
+
+/* Container to center button at bottom */
+.about-button {
+    display: flex;
+    justify-content: center; /* centers button horizontally */
+    margin-top: 30px;       /* spacing from content */
+}
+footer {
+    background-color: #111;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+footer .social-links a {
+    color: #fff;
+    margin: 0 12px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+footer .social-links a:hover {
+    color: #00aaff;
+}
+
